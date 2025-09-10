@@ -80,7 +80,7 @@ const AdminLogin = () => {
   };
 
   const getInputStyle = (fieldName) => ({
-    width: "100%",
+    width: 380,
     marginBottom: "10px",
     padding: "12px 16px",
     border: errors[fieldName] ? "2px solid #e74c3c" : "2px solid #e1e8ed",
@@ -95,10 +95,19 @@ const AdminLogin = () => {
       maxWidth: 400,
       margin: "50px auto",
       padding: "30px",
-      backgroundColor: "#fff",
+      backgroundColor: "whitesmoke",
       borderRadius: "12px",
       boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
     }}>
+
+      <h2 style={{
+        textAlign: "center",
+        marginBottom: "30px",
+        color: "#2c3e50",
+        fontSize: "24px",
+        fontWeight: "600",
+      }}>  welcome to Dream Maker Organisation portal </h2>
+
       <h2 style={{
         textAlign: "center",
         marginBottom: "30px",
@@ -110,7 +119,7 @@ const AdminLogin = () => {
       </h2>
       
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "20px" }}>
+        <div style={{ marginBottom: "10px" }}>
           <input
             type="email"
             name="email"
@@ -138,7 +147,8 @@ const AdminLogin = () => {
             disabled={loading}
           />
           {errors.password && (
-            <p style={{ color: "#e74c3c", fontSize: "12px", margin: "5px 0 0 0" }}>
+            <p 
+            style={{ color: "#e74c3c", fontSize: "12px", margin: "5px 0 0 0" }}>
               {errors.password}
             </p>
           )}
@@ -171,6 +181,10 @@ const AdminLogin = () => {
       }}>
         New admin? <Link to="/register" style={{ color: "#3498db", textDecoration: "none" }}>Register here</Link>
       </p>
+
+
+
+      
     </div>
   );
 };
